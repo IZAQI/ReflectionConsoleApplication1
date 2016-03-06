@@ -158,14 +158,14 @@ namespace ReflectionConsoleApplication1
 
         public override bool Equals(object obj)
         {
-            var o = obj as ReflectionEquals;
-            if (o == null) return false;            
+            //var o = obj as ReflectionEquals;
+            //if (o == null) return false;            
 
             for (int i = 0; i < fields.Length; i++)
             {
                 var field = fields[i];
 
-                if (!field.GetValue(this).Equals(field.GetValue(o))) return false;
+                if (!field.GetValue(this).Equals(field.GetValue(obj))) return false;
             }
             return true;
         }

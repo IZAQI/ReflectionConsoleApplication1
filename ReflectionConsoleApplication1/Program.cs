@@ -102,7 +102,7 @@ namespace ReflectionConsoleApplication1
         public override bool Equals(object obj)
         {
             var o = obj as NormalEquals;
-            if(o == null) return false;
+            if (o == null) return false;
             if (member0 != o.member0) return false;
             if (member1 != o.member1) return false;
             if (member2 != o.member2) return false;
@@ -161,12 +161,19 @@ namespace ReflectionConsoleApplication1
             //var o = obj as ReflectionEquals;
             //if (o == null) return false;            
 
+#if false
             for (int i = 0; i < fields.Length; i++)
             {
                 var field = fields[i];
 
                 if (!field.GetValue(this).Equals(field.GetValue(obj))) return false;
             }
+#else
+            foreach (var field in fields)
+            {
+                if (!field.GetValue(this).Equals(field.GetValue(obj))) return false;
+            }
+#endif
             return true;
         }
 

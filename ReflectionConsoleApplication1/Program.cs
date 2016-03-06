@@ -126,6 +126,31 @@ namespace ReflectionConsoleApplication1
             return true;
         }
 
+        public bool Equals(NormalEquals o)
+        {
+            if (member0 != o.member0) return false;
+            if (member1 != o.member1) return false;
+            if (member2 != o.member2) return false;
+            if (member3 != o.member3) return false;
+            if (member4 != o.member4) return false;
+            if (member5 != o.member5) return false;
+            if (member6 != o.member6) return false;
+            if (member7 != o.member7) return false;
+            if (member8 != o.member8) return false;
+            if (member9 != o.member9) return false;
+            if (!memberS0.Equals(o.memberS0)) return false;
+            if (!memberS1.Equals(o.memberS1)) return false;
+            if (!memberS2.Equals(o.memberS2)) return false;
+            if (!memberS3.Equals(o.memberS3)) return false;
+            if (!memberS4.Equals(o.memberS4)) return false;
+            if (!memberS5.Equals(o.memberS5)) return false;
+            if (!memberS6.Equals(o.memberS6)) return false;
+            if (!memberS7.Equals(o.memberS7)) return false;
+            if (!memberS8.Equals(o.memberS8)) return false;
+            if (!memberS9.Equals(o.memberS9)) return false;
+            return true;
+        }
+
     }
 
     class ReflectionEquals
